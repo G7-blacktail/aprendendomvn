@@ -1,0 +1,2 @@
+Set-ExecutionPolicy -Scope CurrentUser Unrestricted - local
+Set-ExecutionPolicy  Unrestricted - global porém só com privilêgios de adminstrador

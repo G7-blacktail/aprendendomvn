@@ -1,0 +1,13 @@
+Criação do projeto via terminal no windows:
+mvn archetype:generate "-DgroupId=aprendendo.maven" "-DartifactId=quick-start-maven" "-Darchetype=maven-archetype-quickstart" "-DinteractiveMode=false" -X
+
+
+Copilar as classes: mvn "compile"
+
+testando a aplicação : mvn test
+
+Empacotando a aplicação : mvn package (criará um arquivo .jar)
+
+Apagando a pasta target mvn clean
+
+Parando os teste: mvn -DskipTests=true clean install
