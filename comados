@@ -11,3 +11,42 @@ Empacotando a aplicação : mvn package (criará um arquivo .jar)
 Apagando a pasta target mvn clean
 
 Parando os teste: mvn -DskipTests=true clean install
+
+Instalando uma dependência localmente: mvn install
+
+
+Problema de transitividade:
+	Escopos:
+		1 - compile
+		2 - provider
+		3 - runtime
+		4 - test
+		5 - import
+		6 - system
+
+Verificação de escopos: mvn dependency:build-classpath _DincludeScope="" (escopo que desejo verificar)
+
+Dependências Opcionais:tag<optional></optional>
+
+	Exclusions: 
+		<exclusions></exclusions>
+
+MVN build lifecycle:
+	Existem 3 ciclo de vida que possuem fases e objetivos definidos:
+
+	Default lifecycle: responsável pelo deploy local.É composto por 23 fases.
+		validate
+		compile
+		test-compile
+		test
+		integration-test
+		package
+		install	
+		deploy
+	
+	Clean : Responsável pela limpeza do projeto. É composto por 3 fases
+		pre-clean
+		clean
+		post-clean
+
+	
